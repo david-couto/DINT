@@ -1,2 +1,2 @@
-# DINT
+# dint
 Diseño de interfaces web 
