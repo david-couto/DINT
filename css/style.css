@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+  }
+body{
+    height: 100%;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    height: 10%;
+    justify-content: space-evenly;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+footer{
+    background-color: aquamarine;
+    
+    text-align: center;
+    padding-top: 20px;
+    height: 10%;
+}
+nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav li{
+    list-style: none;
+
+}
+nav li a{
+    color:black;
+    text-decoration: none;
+}
+nav li a:hover{
+    background-color: white;
+    padding: 5px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url("../img/fondo.webp");
+    height: 80%;
+}
+section{
+    background-color: rgb(252, 249, 71);
+    padding: 20px 50px 20px 50px  ;
+    margin: 30px;
+}
