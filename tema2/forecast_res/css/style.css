@@ -1,0 +1,244 @@
+/* Copyright 2018 Google LLC. SPDX-License-Identifier: Apache-2.0 */
+
+
+/* CSS files add styling rules to your content */
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    /*border: 1px solid #999;*/
+}
+
+body {
+    font-family: Roboto, Arial;
+    font-size: 0.8em;
+    color: #666;
+    
+}
+
+.icon {
+    background-repeat: no-repeat;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+}
+
+.icon.rain {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Frain_s_cloudy.png?v=1588942692675");
+}
+
+.icon.sunny {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fsunny.png?v=1588942701577");
+}
+
+.icon.pc {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fpartly_cloudy.png?v=1588942697934");
+}
+
+.icon.sshowers {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Frain_s_cloudy.png?v=1588942692675");
+}
+
+.icon.cloudy {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fcloudy.png?v=1588942708821");
+    
+}
+
+.icon.thunder {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fthunderstorms.png?v=1588942705076");
+}
+
+.weather-forecast {
+    padding: 10px 10px 0 10px;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    width: 650px;
+    }
+
+
+
+/* Header row */
+header{
+    display: flex;
+    flex-direction: column;
+}
+.location {
+    font-size: 3em;
+    color: #444;
+}
+
+.date {}
+
+.desc {}
+
+
+/* Current Weather Summary */
+
+.current {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.current .visual {
+    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.current .description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Current Weather -
+Visual */
+
+.visual .icon {
+    width: 50px;
+    height: 60px;
+}
+
+.temp {
+    font-size: 2.5em;
+    
+    
+}
+
+.scale {
+    
+    margin-top: 6px;
+    color: #888;
+}
+
+
+/* General Labels */
+
+.wind:before {
+    content: "Wind: ";
+    color: #888;
+}
+
+.precip:before {
+    content: "Precipitation: ";
+    color: #888;
+}
+
+.humidity:before {
+    content: "Humidity: ";
+    color: #888;
+}
+
+.pollen:before {
+    content: "Pollen Count: ";
+    color: #888;
+}
+
+.pcount:before {
+    content: "Pollen ";
+    color: #888;
+}
+
+
+/* Seven Day Forecast */
+
+.seven-day {
+   display: flex;
+   flex:100%;
+   justify-content: space-between;
+   padding-right: 20px;
+   padding-left: 20px;
+}
+
+.seven-day-fc {
+    margin: 0 -11px -1px -11px;
+    padding: 10px;
+}
+
+.seven-day-fc {
+    display: flex;
+    flex-direction: column;
+}
+
+.seven-day-fc .date {
+    font-weight: bold;
+    color: #444;
+}
+
+.seven-day-fc .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.seven-day-fc .seven-day-temp {
+    text-align: center;
+    display:flex;
+    justify-content: space-between;
+}
+
+.seven-day-fc .temp-high {
+    color: #444;
+}
+
+.seven-day-fc .temp-low {
+    color: #888;
+}
+
+
+
+.seven-day-fc .pcount {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .weather-forecast{
+        height: 1400px;
+        font-size: 2em;
+        
+    }
+    .seven-day{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .seven-day-fc {
+        text-align: center;
+        
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        flex:100%;
+        display:flex;
+        flex-direction: row;
+    }
+    .seven-day-fc:last-of-type {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .seven-day-fc .date {
+        
+        padding-top: 40px;
+        width: 30%;
+    }
+    .seven-day-fc .seven-day-temp {
+        padding-top: 40px;
+        width: 25%;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .seven-day-fc .pcount {
+        padding-top: 40px;
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .seven-day-fc .icon{
+        width: 64px;
+        height: 64px;
+        margin-top: 40px;
+    }
+}
+
